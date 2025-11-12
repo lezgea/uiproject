@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Project-1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="images/logo.png" alt="Company logo" />
+      <div class="brand-name">XYZ</div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-section">General</div>
+      <ul>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#color">Color</a></li>
+        <li><a href="#layout">Page Layout</a></li>
+        <li><a href="#dataviz">Data Visualization</a></li>
+      </ul>
+
+      <div class="nav-section">Elements</div>
+      <ul>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#stats">Stat / Data</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <header class="hero">
+      <h1><span class="brand-inline">XYZ</span> Pattern Library</h1>
+      <p class="subtitle">Core styles, components, and chart guidance for dashboards.</p>
+    </header>
+
+    <section id="color" class="section">
+      <h2>Color</h2>
+
+      <h3>Brand Color</h3>
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="chip" style="--chip:#1F78FF"></div>
+          <div class="label"><div class="name">Primary 500</div><div class="hex">#1F78FF</div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="--chip:#0B3175"></div>
+          <div class="label"><div class="name">Primary 800</div><div class="hex">#0B3175</div></div>
+        </div>
+      </div>
+
+      <h3>Functional Color</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="chip" style="--chip:#0F172A"></div><div class="label"><div class="name">Ink</div><div class="hex">#0F172A</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#F8FAFC; border:1px solid #E2E8F0"></div><div class="label"><div class="name">Surface</div><div class="hex">#F8FAFC</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#E2E8F0"></div><div class="label"><div class="name">Border</div><div class="hex">#E2E8F0</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#64748B"></div><div class="label"><div class="name">Muted</div><div class="hex">#64748B</div></div></div>
+      </div>
+
+      <h3>Feedback Color</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="chip" style="--chip:#16A34A"></div><div class="label"><div class="name">Success</div><div class="hex">#16A34A</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#D97706"></div><div class="label"><div class="name">Warning</div><div class="hex">#D97706</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#DC2626"></div><div class="label"><div class="name">Danger</div><div class="hex">#DC2626</div></div></div>
+      </div>
+    </section>
+
+    <section id="layout" class="section">
+      <h2>Page Layout</h2>
+      
+      <h3>Dashboard Grid System</h3>
+      <p class="meta">12-column responsive grid for chart arrangement</p>
+      
+      <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--r); border: 1px solid var(--border); margin-bottom: var(--space-4);">
+        <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-3); margin-bottom: var(--space-3);">
+          <div style="background: var(--brand); height: 40px; border-radius: 4px; grid-column: span 3;"></div>
+          <div style="background: var(--brand); height: 40px; border-radius: 4px; grid-column: span 3;"></div>
+          <div style="background: var(--brand); height: 40px; border-radius: 4px; grid-column: span 3;"></div>
+          <div style="background: var(--brand); height: 40px; border-radius: 4px; grid-column: span 3;"></div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-3);">
+          <div style="background: var(--brand); height: 200px; border-radius: 4px; grid-column: span 8;"></div>
+          <div style="background: var(--brand); height: 200px; border-radius: 4px; grid-column: span 4;"></div>
+        </div>
+      </div>
+
+      <h3>Breakpoints</h3>
+      <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--r); border: 1px solid var(--border);">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-3); align-items: center;">
+          <strong>Mobile</strong><span>&lt; 720px - Single column layout</span>
+          <strong>Tablet</strong><span>720px - 1024px - 2 column layout</span>
+          <strong>Desktop</strong><span>&gt; 1024px - Multi-column layout</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="dataviz" class="section">
+      <h2>Data Visualization</h2>
+      
+      <h3>Chart Types & Usage</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4);">
+        
+        <div style="border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4);">
+          <h4>Line Chart</h4>
+          <div style="background: var(--surface); height: 120px; display: flex; align-items: end; gap: 4px; padding: var(--space-3); border-radius: 4px;">
+            <div style="background: var(--brand); width: 20px; height: 80%; border-radius: 2px;"></div>
+            <div style="background: var(--brand); width: 20px; height: 60%; border-radius: 2px;"></div>
+            <div style="background: var(--brand); width: 20px; height: 90%; border-radius: 2px;"></div>
+            <div style="background: var(--brand); width: 20px; height: 40%; border-radius: 2px;"></div>
+          </div>
+          <p class="meta">Use for: Time series data, trends over time</p>
+        </div>
+
+        <div style="border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4);">
+          <h4>Bar Chart</h4>
+          <div style="background: var(--surface); height: 120px; display: flex; align-items: end; justify-content: space-around; padding: var(--space-3); border-radius: 4px;">
+            <div style="background: var(--success); width: 30px; height: 70%; border-radius: 2px;"></div>
+            <div style="background: var(--warning); width: 30px; height: 40%; border-radius: 2px;"></div>
+            <div style="background: var(--danger); width: 30px; height: 90%; border-radius: 2px;"></div>
+          </div>
+          <p class="meta">Use for: Comparing categories, discrete data</p>
+        </div>
+
+        <div style="border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4);">
+          <h4>Pie Chart</h4>
+          <div style="background: var(--surface); height: 120px; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: conic-gradient(var(--brand) 0% 40%, var(--success) 40% 70%, var(--warning) 70% 100%);"></div>
+          </div>
+          <p class="meta">Use for: Proportional data, percentages</p>
+        </div>
+
+      </div>
+
+      <h3>Chart Colors</h3>
+      <div class="swatch-grid">
+        <div class="swatch"><div class="chip" style="--chip:#1F78FF"></div><div class="label"><div class="name">Primary Data</div><div class="hex">#1F78FF</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#16A34A"></div><div class="label"><div class="name">Secondary Data</div><div class="hex">#16A34A</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#D97706"></div><div class="label"><div class="name">Tertiary Data</div><div class="hex">#D97706</div></div></div>
+        <div class="swatch"><div class="chip" style="--chip:#DC2626"></div><div class="label"><div class="name">Alert Data</div><div class="hex">#DC2626</div></div></div>
+      </div>
+    </section>
+
+    <section id="buttons" class="section">
+      <h2>Buttons</h2>
+      
+      <h3>Primary Buttons</h3>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4);">
+        <button style="background: var(--brand); color: white; border: none; padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Primary Button</button>
+        <button style="background: var(--success); color: white; border: none; padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Success Button</button>
+        <button style="background: var(--danger); color: white; border: none; padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Danger Button</button>
+      </div>
+
+      <h3>Secondary Buttons</h3>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-4);">
+        <button style="background: transparent; color: var(--brand); border: 1px solid var(--brand); padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Secondary Button</button>
+        <button style="background: transparent; color: var(--muted); border: 1px solid var(--border); padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Outline Button</button>
+      </div>
+
+      <h3>Button States</h3>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+        <button style="background: var(--brand); color: white; border: none; padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer; opacity: 0.6;">Disabled</button>
+        <button style="background: var(--brand-dark); color: white; border: none; padding: var(--space-3) var(--space-4); border-radius: var(--r); font: inherit; cursor: pointer;">Hover</button>
+      </div>
+    </section>
+
+    <section id="form" class="section">
+      <h2>Form Elements</h2>
+      
+      <h3>Input Fields</h3>
+      <div style="max-width: 400px; display: grid; gap: var(--space-4);">
+        <div>
+          <label style="display: block; margin-bottom: var(--space-2); font-weight: 600;">Text Input</label>
+          <input type="text" style="width: 100%; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--r); font: inherit;" placeholder="Enter text...">
+        </div>
+        
+        <div>
+          <label style="display: block; margin-bottom: var(--space-2); font-weight: 600;">Dropdown</label>
+          <select style="width: 100%; padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--r); font: inherit;">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+      </div>
+
+      <h3>Checkboxes & Radio Buttons</h3>
+      <div style="display: grid; gap: var(--space-3); max-width: 400px;">
+        <label style="display: flex; align-items: center; gap: var(--space-3);">
+          <input type="checkbox">
+          <span>Checkbox option</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: var(--space-3);">
+          <input type="radio" name="radio-group">
+          <span>Radio option 1</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: var(--space-3);">
+          <input type="radio" name="radio-group">
+          <span>Radio option 2</span>
+        </label>
+      </div>
+    </section>
+
+    <section id="notifications" class="section">
+      <h2>Notifications</h2>
+      
+      <div style="display: grid; gap: var(--space-3); max-width: 500px;">
+        <div style="background: #F0F9FF; border: 1px solid #BAE6FD; color: #0369A1; padding: var(--space-4); border-radius: var(--r);">
+          <strong>Info:</strong> This is an informational message
+        </div>
+        <div style="background: #FEF2F2; border: 1px solid #FECACA; color: #DC2626; padding: var(--space-4); border-radius: var(--r);">
+          <strong>Error:</strong> This is an error message
+        </div>
+        <div style="background: #F0FDF4; border: 1px solid #BBF7D0; color: #16A34A; padding: var(--space-4); border-radius: var(--r);">
+          <strong>Success:</strong> This is a success message
+        </div>
+        <div style="background: #FFFBEB; border: 1px solid #FDE68A; color: #D97706; padding: var(--space-4); border-radius: var(--r);">
+          <strong>Warning:</strong> This is a warning message
+        </div>
+      </div>
+    </section>
+
+    <section id="tables" class="section">
+      <h2>Tables</h2>
+      
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: var(--surface);">
+              <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Name</th>
+              <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Status</th>
+              <th style="padding: var(--space-3); text-align: left; border-bottom: 2px solid var(--border);">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: var(--space-3);">Project Alpha</td>
+              <td style="padding: var(--space-3);"><span style="background: var(--success); color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">Active</span></td>
+              <td style="padding: var(--space-3);">$12,450</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: var(--space-3);">Project Beta</td>
+              <td style="padding: var(--space-3);"><span style="background: var(--warning); color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">Pending</span></td>
+              <td style="padding: var(--space-3);">$8,290</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="stats" class="section">
+      <h2>Stat / Data Cards</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4);">
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4); text-align: center;">
+          <div style="font-size: 32px; font-weight: 700; color: var(--brand);">1,234</div>
+          <div style="color: var(--muted);">Total Users</div>
+        </div>
+        
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4); text-align: center;">
+          <div style="font-size: 32px; font-weight: 700; color: var(--success);">89%</div>
+          <div style="color: var(--muted);">Success Rate</div>
+        </div>
+        
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: var(--space-4); text-align: center;">
+          <div style="font-size: 32px; font-weight: 700; color: var(--warning);">45</div>
+          <div style="color: var(--muted);">Pending Items</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="typography" class="section is-default">
+      <h2>Typography</h2>
+      <div class="type-block">
+        <h3>Headings</h3>
+        <p class="meta">Typeface: <strong>Alatsi</strong> | Font family: <code>Alatsi, sans-serif</code></p>
+
+        <div class="type-demo">
+          <div class="hxl">Heading XL – Alatsi</div>
+          <div class="h1">Heading 1 – Alatsi</div>
+          <div class="h2">Heading 2 – Alatsi</div>
+          <div class="h3">Heading 3 – Alatsi</div>
+        </div>
+      </div>
+
+      <div class="type-block">
+        <h3>Contents</h3>
+        <p class="meta">Typeface: <strong>Quicksand</strong> | Font family: <code>Quicksand, sans-serif</code></p>
+
+        <div class="type-demo">
+          <p class="body-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Large)</p>
+          <p class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Base)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
